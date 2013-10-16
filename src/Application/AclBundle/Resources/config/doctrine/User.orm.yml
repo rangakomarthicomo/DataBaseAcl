@@ -1,0 +1,38 @@
+Application\AclBundle\Entity\User:
+    type: entity
+    table: users
+    repositoryClass: Application\AclBundle\Entity\UserRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        username:
+            type: string
+            length: 255
+        salt:
+            type: string
+            length: 255
+        password:
+            type: string
+            length: 255
+        email:
+            type: string
+            length: 255
+        isActive:
+            type: boolean
+            column: is_active
+    manyToMany:
+      roles:
+        targetEntity: Role
+        inversedBy: users
+        joinTable:
+            name: users_role
+            joinColumns:
+                user_id:
+                  referencedColumnName: id
+            inverseJoinColumns:
+                role_id:
+                  referencedColumnName: id
+    lifecycleCallbacks: {  }

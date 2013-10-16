@@ -1,0 +1,11 @@
+application_acl:
+    resource: "@ApplicationAclBundle/Resources/config/routing.yml"
+    prefix:   /
+ApplicationAclBundle_user:
+    resource: "@ApplicationAclBundle/Resources/config/routing/user.yml"
+    prefix:   /user
+ApplicationAclBundle_role:
+    resource: "@ApplicationAclBundle/Resources/config/routing/role.yml"
+    prefix:   /role
+
+

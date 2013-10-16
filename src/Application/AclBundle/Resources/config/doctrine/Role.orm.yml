@@ -1,0 +1,21 @@
+Application\AclBundle\Entity\Role:
+    type: entity
+    table: roles
+    repositoryClass: Application\AclBundle\Entity\RoleRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        name:
+            type: string
+            length: 255
+        role:
+            type: string
+            length: 255
+    mantToMany:
+      users:
+        targetEntity: User
+        mappedBy: roles
+    lifecycleCallbacks: {  }

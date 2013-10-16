@@ -1,0 +1,30 @@
+user:
+    pattern:  /
+    defaults: { _controller: "ApplicationAclBundle:User:index" }
+
+user_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "ApplicationAclBundle:User:show" }
+
+user_new:
+    pattern:  /new
+    defaults: { _controller: "ApplicationAclBundle:User:new" }
+
+user_create:
+    pattern:  /create
+    defaults: { _controller: "ApplicationAclBundle:User:create" }
+    requirements: { _method: post }
+
+user_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "ApplicationAclBundle:User:edit" }
+
+user_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "ApplicationAclBundle:User:update" }
+    requirements: { _method: post|put }
+
+user_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "ApplicationAclBundle:User:delete" }
+    requirements: { _method: post|delete }

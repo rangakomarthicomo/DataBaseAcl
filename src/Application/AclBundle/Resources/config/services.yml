@@ -1,0 +1,7 @@
+parameters:
+#    application_acl.example.class: Application\AclBundle\Example
+
+services:
+#    application_acl.example:
+#        class: %application_acl.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

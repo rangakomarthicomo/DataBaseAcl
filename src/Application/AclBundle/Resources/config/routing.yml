@@ -1,0 +1,6 @@
+application_acl_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: ApplicationAclBundle:Default:index }
+application_acl_loginpage:
+    pattern: /login
+    defaults: { _controller: ApplicationAclBundle:Login:login }
